@@ -35,6 +35,9 @@ namespace Blackjack
 
     public class Card
     {
+        private const string CARD_WIDTH = "100px";
+        private const string CARD_HEIGHT = "100px";
+
         public Mark Mark { get; }
         public Number Number { get; }
 

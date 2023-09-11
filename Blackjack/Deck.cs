@@ -67,7 +67,7 @@ namespace Blackjack
 
             // 最初のカードを取得
             Card drawnCard = cards.First();
-            // カードを引かれたのでデッキから削除
+            // カードが引かれたのでデッキから削除
             cards.RemoveAt(0);
             return drawnCard;
         }

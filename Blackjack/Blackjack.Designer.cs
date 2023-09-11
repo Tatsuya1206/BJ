@@ -137,7 +137,6 @@ namespace Blackjack
             this.Controls.Add(this.Hit);
             this.Name = "Blackjack";
             this.Text = "Blackjack";
-            this.Load += new System.EventHandler(this.Blackjack_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -16,12 +16,14 @@ namespace Blackjack
         private const string JUDE_PLAYER_WIN = "1";
         private const string JUDE_DORW = "9";
         private const string PNG = ".png";
+        private const string OF = "Of";
+        private const string CARDS_DIR = @".\TrumpPNG\";
 
         private Deck deck;
         // プレイヤー
-        public Player player { get; }
+        public Player player;
         // ディーラー
-        public Player dealer { get; }
+        public Player dealer;
 
         public Blackjack()
         {
@@ -175,7 +177,7 @@ namespace Blackjack
             foreach (Card card in hand.GetCards())
             {
                 PictureBox pictureBox = new PictureBox();
-                pictureBox.Image = Image.FromFile(card.Mark.ToString() + card.Number.ToString() + PNG);
+                pictureBox.Image = Image.FromFile(CARDS_DIR + card.Mark.ToString() + OF + card.Number.ToString() + PNG);
                 if (isPlayer)
                 {
                     this.groupBox2.Controls.Add(pictureBox);
@@ -184,7 +186,6 @@ namespace Blackjack
                 {
                     this.groupBox1.Controls.Add(pictureBox);
                 }
-                
             }
         }
 
